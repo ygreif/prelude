@@ -9,9 +9,14 @@
     (mapc (lambda (pkg) (package-install pkg)) pkg-list)))
 
 (use-package copilot
-  :load-path (lambda () (expand-file-name "copilot.el" user-emacs-directory))
+  :vc (:url "https://github.com/copilot-emacs/copilot.el"
+            :rev :newest
+            :branch "main"))
+
+;(use-package copilot
+ ; :load-path (lambda () (expand-file-name "copilot.el" user-emacs-directory))
   ;; don't show in mode line
-  :diminish)
+  ;:diminish)
 
 (defun rk/no-copilot-mode ()
   "Helper for `rk/no-copilot-modes'."
