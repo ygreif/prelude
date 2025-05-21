@@ -91,3 +91,5 @@ is available. Useful if you tend to hammer your keys like I do."
     (copilot-mode 1)))
 
 (global-set-key (kbd "M-p") 'enable-copilot-for-python)
+
+(add-to-list 'copilot-indentation-alist '(python-mode 2))
